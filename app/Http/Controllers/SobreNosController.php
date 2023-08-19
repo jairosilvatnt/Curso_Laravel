@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SobreNosController extends Controller
 {
-    public function sobreNos(){
-        return view('site.sobre');
+    public function index(){
+        return view('site.sobre-nos');
     }
 }

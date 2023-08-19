@@ -1,19 +1,18 @@
-@extends('site.layouts.basico')
-@section('titulo','Contatos')
-@section('conteudo')
 
+@extends('site.layouts.basico')
+
+@section('titulo','Sobre-nos')
+
+@section('conteudo')
+    
     <div class="conteudo-pagina">
         <div class="titulo-pagina">
-            <h1>Entre em contato conosco</h1>
+            <h1>Olá, eu sou o Super Gestão</h1>
         </div>
 
         <div class="informacao-pagina">
-            <div class="contato-principal">
-                @component('site.layouts._component.form_contato', ['classe'=>'borda-preta'])
-                <p>A nossa equipe analizará a sua mensagem e retornaremos o mais brevemente possivel.</p>
-
-                @endcomponent
-            </div>
+            <p>O Super Gestão é o sistema online de controle administrativo que pode transformar e potencializar os negócios da sua empresa.</p>
+            <p>Desenvolvido com a mais alta tecnologia para você cuidar do que é mais importante, seus negócios!</p>
         </div>
     </div>
 

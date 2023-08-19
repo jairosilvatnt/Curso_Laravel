@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // -----------ROTAS UTILIZANDO SISTEMAS DE CONTROLES -----------------
+
+Route::get('/', [\App\Http\Controllers\PrincipalController::class,'principal'])->name('site.principal');
+Route::get('/sobrenos', [\App\Http\Controllers\SobreNosController::class,'index'])->name('site.sobrenos');
 Route::get('/contato', [\App\Http\Controllers\ContatoController::class,'contato'])->name('site.contato');
-Route::get('/principal', [\App\Http\Controllers\PrincipalController::class,'principal'])->name('site.principal');
-Route::get('/sobrenos', [\App\Http\Controllers\SobreNosController::class,'sobreNos'])->name('site.sobrenos');
+Route::post('/contato', [\App\Http\Controllers\ContatoController::class,'contato'])->name('site.contato');
 
 // -------ROTAS UTILIZANDO SISTEMAS DE CALLBACK------------
 Route::get('/login', function (){ return 'Login';})->name('');
